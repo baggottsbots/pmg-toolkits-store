@@ -20,7 +20,7 @@
 
 <script data-gate>
 (function(){
-  var slug='QKuvCGGN5K';var apiBase='https://paymegpt.com';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=5000000;var thankYouMsg='Thank you for your generous donation!';
+  var slug='vgXcpt9k';var apiBase='https://paymegpt.com';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=5000000;var thankYouMsg='Thank you for your generous donation!';
   var successSubtext='Check your email for your receipt and toolkit access. Thanks for your order!';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
   function fmtD(c){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}
   function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
@@ -169,7 +169,7 @@
   function run(){
     if(contactId){
       var xhr=new XMLHttpRequest();
-      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4225');
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4226');
       xhr.onload=function(){
         if(xhr.status===200){
           try{
@@ -196,7 +196,7 @@
 </script>
 <script data-payment>
 (function(){
-  var slug='QKuvCGGN5K';
+  var slug='vgXcpt9k';
   var apiBase='https://paymegpt.com';
   var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
   function findEmail(){
@@ -260,7 +260,7 @@
   <div class="wrap">
     <div class="brand"><span class="dot"></span> PayMeGPT Store</div>
     <button class="cart-btn" onclick="openCart()">
-      Cart <span class="cart-count" id="cartCount">0</span>
+      Carrito <span class="cart-count" id="cartCount">0</span>
     </button>
   </div>
 </header>
@@ -301,7 +301,7 @@
     </div>
     <div class="totals"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
     <div class="tax-note">Sales tax is calculated by Stripe at checkout based on your billing address.</div>
-    <button class="checkout-btn" id="checkoutBtn" onclick="checkout()">Checkout securely</button>
+    <button class="checkout-btn" id="checkoutBtn" onclick="checkout()">Pagar de forma segura</button>
   </div>
 </aside>
 
