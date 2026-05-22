@@ -2,7 +2,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 
   var PRODUCTS = [
     {
-      id:'starter', name:'PMG Starter Pack', price:2900, icon:'\uD83D\uDE80',
+      id:'starter', name:'PMG Starter Pack', price:100, icon:'\uD83D\uDE80',
       features:['10 ready-to-use flow templates','Step-by-step setup guide','Lead-capture form pack','Email and community support']
     },
     {
