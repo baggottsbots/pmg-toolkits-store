@@ -27,16 +27,16 @@ document.getElementById('yr').textContent = new Date().getFullYear();
       '<h3>'+p.name+'</h3>'+
       '<div class="price">'+money(p.price)+' <span>one-time</span></div>'+
       '<ul>'+p.features.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul>'+
-      '<button class="add-btn" id="btn-'+p.id+'" onclick="addToCart(\''+p.id+'\')">Add to cart</button>';
+      '<button class="add-btn" id="btn-'+p.id+'" onclick="addToCart(\''+p.id+'\')">A&ntilde;adir al carrito</button>';
     grid.appendChild(card);
   });
 
   function addToCart(id){
     cart[id] = (cart[id]||0) + 1;
     var btn = document.getElementById('btn-'+id);
-    btn.textContent = 'Added';
+    btn.textContent = 'A\u00f1adido';
     btn.classList.add('in-cart');
-    setTimeout(function(){ btn.textContent='Add to cart'; btn.classList.remove('in-cart'); }, 1100);
+    setTimeout(function(){ btn.textContent='A\u00f1adir al carrito'; btn.classList.remove('in-cart'); }, 1100);
     renderCart();
   }
 
@@ -118,8 +118,6 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     var totalCents = subtotalCents();
     var totalDollars = totalCents / 100;
 
-    // The platform's __processDonation expects amount in DOLLARS.
-    // Line items are sent with per-unit price in dollars too.
     var items = ids.map(function(id){
       var p = PRODUCTS.filter(function(x){return x.id===id;})[0];
       return {
@@ -133,11 +131,11 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 
     var btn = document.getElementById('checkoutBtn');
     btn.disabled = true;
-    btn.textContent = 'Redirecting to Stripe...';
+    btn.textContent = 'Redirigiendo a Stripe...';
 
     function reset(){
       btn.disabled = false;
-      btn.textContent = 'Checkout securely';
+      btn.textContent = 'Pagar de forma segura';
     }
 
     try{
