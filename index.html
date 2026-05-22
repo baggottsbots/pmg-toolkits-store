@@ -20,8 +20,8 @@
 
 <script data-gate>
 (function(){
-  var slug='vgXcpt9k';var apiBase='https://paymegpt.com';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=5000000;var thankYouMsg='Thank you for your generous donation!';
-  var successSubtext='Check your email for your receipt and toolkit access. Thanks for your order!';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  var slug='Kdw7apbjqA';var apiBase='https://paymegpt.com';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=5000000;var thankYouMsg='Thank you for your generous donation!';
+  var successSubtext='Revisa tu correo para tu recibo y acceso al kit. Gracias por tu compra!';var successBtnLabel='Continuar';var successBtnColor='#16a34a';var successRedirect='';
   function fmtD(c){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}
   function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
   function findDonName(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
@@ -169,7 +169,7 @@
   function run(){
     if(contactId){
       var xhr=new XMLHttpRequest();
-      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4226');
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4227');
       xhr.onload=function(){
         if(xhr.status===200){
           try{
@@ -196,7 +196,7 @@
 </script>
 <script data-payment>
 (function(){
-  var slug='vgXcpt9k';
+  var slug='Kdw7apbjqA';
   var apiBase='https://paymegpt.com';
   var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
   function findEmail(){
